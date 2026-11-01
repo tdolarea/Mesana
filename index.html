@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#070d1e">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>MESANA · Ceremonial y Tradiciones Navales</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      -webkit-tap-highlight-color: transparent;
+    }
+    body {
+      background: #070d1e;
+      color: #f1f5f9;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 16px;
+    }
+    .container {
+      width: 100%;
+      max-width: 520px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    /* CABECERA NAVAL */
+    .header-card {
+      background: linear-gradient(180deg, #0f1c3f 0%, #0a132c 100%);
+      border: 1.5px solid #1e3a8a;
+      border-radius: 14px;
+      padding: 20px 16px;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+      position: relative;
+      overflow: hidden;
+    }
+    .header-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #c2410c 0%, #facc15 50%, #c2410c 100%);
+    }
+    .escudo-icon {
+      font-size: 32px;
+      margin-bottom: 6px;
+      display: inline-block;
+    }
+    .titulo-principal {
+      font-size: 20px;
+      font-weight: 900;
+      letter-spacing: 1.5px;
+      color: #38bdf8;
+      text-transform: uppercase;
+    }
+    .subtitulo {
+      font-size: 11.5px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: #cbd5e1;
+      margin-top: 4px;
+      text-transform: uppercase;
+    }
+    .lema {
+      font-size: 11px;
+      font-style: italic;
+      color: #facc15;
+      margin-top: 6px;
+      letter-spacing: 0.5px;
+    }
+
+    /* LISTA DE MÓDULOS NAVALES */
+    .modulos-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .modulo-btn {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background: #0f172a;
+      border: 1.5px solid #1e293b;
+      border-left: 4px solid #0284c7;
+      border-radius: 12px;
+      padding: 14px 16px;
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.15s ease-in-out;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    }
+    .modulo-btn:active {
+      transform: scale(0.98);
+      background: #1e293b;
+      border-color: #38bdf8;
+    }
+    .modulo-num {
+      width: 28px;
+      height: 28px;
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: 900;
+      color: #38bdf8;
+      flex-shrink: 0;
+    }
+    .modulo-icon {
+      font-size: 26px;
+      flex-shrink: 0;
+      width: 32px;
+      text-align: center;
+    }
+    .modulo-info {
+      flex: 1;
+      min-width: 0;
+    }
+    .modulo-title {
+      font-size: 14px;
+      font-weight: 800;
+      color: #f8fafc;
+      letter-spacing: 0.3px;
+    }
+    .modulo-desc {
+      font-size: 11px;
+      color: #94a3b8;
+      margin-top: 3px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .modulo-arrow {
+      font-size: 16px;
+      color: #64748b;
+      flex-shrink: 0;
+    }
+
+    /* PIE DE PÁGINA */
+    footer {
+      text-align: center;
+      margin-top: 20px;
+      padding: 12px;
+      color: #64748b;
+      font-family: monospace;
+      font-size: 11px;
+    }
+    .copy {
+      font-weight: 700;
+      color: #94a3b8;
+      margin-bottom: 2px;
+    }
+  </style>
+  <link rel="manifest" href="manifest.json">
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js').catch(() => {});
+      });
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <!-- CABECERA -->
+    <header class="header-card">
+      <div class="escudo-icon">⚓</div>
+      <h1 class="titulo-principal">MESANA</h1>
+      <div class="subtitulo">Ceremonial y Tradiciones Navales</div>
+      <div class="lema">«Primus Circumdedisti Me» · A.E. Juan Sebastián de Elcano</div>
+    </header>
+
+    <!-- MÓDULOS EN ORDEN OFICIAL -->
+    <main class="modulos-grid">
+      <!-- 1. Chifle Virtual -->
+      <a href="https://tdolarea.github.io/CHIFLE_VIRTUAL_PWA/" class="modulo-btn">
+        <div class="modulo-num">1</div>
+        <div class="modulo-icon">📢</div>
+        <div class="modulo-info">
+          <div class="modulo-title">Chifle Virtual</div>
+          <div class="modulo-desc">Portalón, toques de maniobra y rutina de a bordo</div>
+        </div>
+        <div class="modulo-arrow">➔</div>
+      </a>
+
+      <!-- 2. Honores entre Buques -->
+      <a href="https://tdolarea.github.io/Honores_buques/" class="modulo-btn">
+        <div class="modulo-num">2</div>
+        <div class="modulo-icon">🚢</div>
+        <div class="modulo-info">
+          <div class="modulo-title">Honores entre Buques</div>
+          <div class="modulo-desc">Atención por babor y estribor, saludos y retirada</div>
+        </div>
+        <div class="modulo-arrow">➔</div>
+      </a>
+
+      <!-- 3. Izado y Arriado a Bordo -->
+      <a href="https://tdolarea.github.io/izado_base/bordo.html" class="modulo-btn">
+        <div class="modulo-num">3</div>
+        <div class="modulo-icon">🌅</div>
+        <div class="modulo-info">
+          <div class="modulo-title">Izado y Arriado a Bordo</div>
+          <div class="modulo-desc">Secuencia ceremonial naval, puerto vs mar y ocaso</div>
+        </div>
+        <div class="modulo-arrow">➔</div>
+      </a>
+
+      <!-- 4. Honores a Autoridades -->
+      <a href="https://tdolarea.github.io/honores_autoridades/" class="modulo-btn">
+        <div class="modulo-num">4</div>
+        <div class="modulo-icon">👑</div>
+        <div class="modulo-info">
+          <div class="modulo-title">Honores a Autoridades</div>
+          <div class="modulo-desc">Protocolo reglamentario de salvas, vivas e himno</div>
+        </div>
+        <div class="modulo-arrow">➔</div>
+      </a>
+
+      <!-- 5. Banda de Música -->
+      <a href="https://tdolarea.github.io/musica_militar/" class="modulo-btn">
+        <div class="modulo-num">5</div>
+        <div class="modulo-icon">🎺</div>
+        <div class="modulo-info">
+          <div class="modulo-title">Banda de Música y Cancionero</div>
+          <div class="modulo-desc">Himnos internacionales, marchas y letras militares</div>
+        </div>
+        <div class="modulo-arrow">➔</div>
+      </a>
+    </main>
+
+    <!-- PIE -->
+    <footer>
+      <div class="copy">@TDF 2026</div>
+      <div style="color: #38bdf8; font-weight: 600;">v1.0.0 · Mesana Portal Naval</div>
+    </footer>
+  </div>
+</body>
+</html>
