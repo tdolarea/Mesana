@@ -1,12 +1,12 @@
 {
-  "name": "MESANA \u00b7 Ceremonial Naval",
+  "name": "MESANA · Ceremonial Naval",
   "short_name": "Mesana",
-  "description": "Portal naval de ceremonial y tradiciones - A.E. Juan Sebasti\u00e1n de Elcano",
+  "description": "Portal naval de ceremonial y tradiciones - A.E. Juan Sebastián de Elcano",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#070d1e",
   "theme_color": "#070d1e",
-    "icons": [
+  "icons": [
     {
       "src": "icon-192.png",
       "sizes": "192x192",
@@ -18,4 +18,4 @@
       "type": "image/png"
     }
   ]
-
+}
