@@ -1,5 +1,5 @@
 // Service Worker para MESANA Portal Naval
-const CACHE_NAME = 'mesana-v2';
+const CACHE_NAME = 'mesana-v3';
 const ASSETS = [
   './',
   './index.html',
